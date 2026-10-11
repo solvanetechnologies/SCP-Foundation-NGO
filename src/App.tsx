@@ -15,6 +15,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { LightboxModal } from './components/LightboxModal';
 import { MobileQuickActions } from './components/MobileQuickActions';
+import { LegalModal, type LegalDocType } from './components/LegalModal';
 
 export const App: React.FC = () => {
   const [lightboxState, setLightboxState] = useState<{
@@ -26,6 +27,22 @@ export const App: React.FC = () => {
     src: '',
     title: '',
   });
+
+  const [legalDoc, setLegalDoc] = useState<LegalDocType>(null);
+
+  // Listen to hash changes for #privacy and #terms direct URLs
+  React.useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === '#privacy') {
+        setLegalDoc('privacy');
+      } else if (window.location.hash === '#terms') {
+        setLegalDoc('terms');
+      }
+    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   const handleOpenLightbox = (src: string, title: string) => {
     setLightboxState({
@@ -73,7 +90,7 @@ export const App: React.FC = () => {
       </main>
 
       {/* Global Footer */}
-      <Footer />
+      <Footer onOpenLegal={(doc) => setLegalDoc(doc)} />
 
       {/* Mobile Sticky Quick Action Dock (Helpline, WhatsApp, Support) */}
       <MobileQuickActions />
@@ -84,6 +101,13 @@ export const App: React.FC = () => {
         src={lightboxState.src}
         title={lightboxState.title}
         onClose={handleCloseLightbox}
+      />
+
+      {/* Accessible Legal Document Modal for Privacy Policy & Terms */}
+      <LegalModal
+        activeDoc={legalDoc}
+        onClose={() => setLegalDoc(null)}
+        onSwitchDoc={(doc) => setLegalDoc(doc)}
       />
     </div>
   );

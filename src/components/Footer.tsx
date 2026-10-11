@@ -136,10 +136,23 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom Bar: Copyright & Back-to-Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        {/* Bottom Bar: Copyright, Powered By, and Back-to-Top */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50 text-center md:text-left">
           <div>
             &copy; {currentYear} {ORGANIZATION_DETAILS.name}. All rights reserved.
+          </div>
+
+          {/* Middle Bottom: Powered and Managed by Solvane Technologies */}
+          <div className="text-white/70">
+            <span>Powered and Managed by: </span>
+            <a
+              href="https://solvanetechnologies.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FF9933] hover:text-white font-semibold transition-colors underline decoration-[#FF9933]/40 underline-offset-2 hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9933] rounded px-0.5"
+            >
+              Solvane Technologies
+            </a>
           </div>
 
           <div className="flex items-center gap-6">

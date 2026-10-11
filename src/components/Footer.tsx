@@ -2,7 +2,11 @@ import React from 'react';
 import { ArrowUp, Phone, Mail, MapPin, Heart } from 'lucide-react';
 import { ORGANIZATION_DETAILS } from '../data/organizationData';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenLegal?: (doc: 'privacy' | 'terms') => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -66,6 +70,24 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onOpenLegal?.('privacy')}
+                  className="hover:text-white transition-colors cursor-pointer text-left"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onOpenLegal?.('terms')}
+                  className="hover:text-white transition-colors cursor-pointer text-left"
+                >
+                  Terms &amp; Conditions
+                </button>
               </li>
             </ul>
           </div>
@@ -136,10 +158,26 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom Bar: Copyright, Powered By, and Back-to-Top */}
+        {/* Bottom Bar: Copyright, Legal Links, Powered By, and Back-to-Top */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50 text-center md:text-left">
-          <div>
-            &copy; {currentYear} {ORGANIZATION_DETAILS.name}. All rights reserved.
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1">
+            <span>&copy; {currentYear} {ORGANIZATION_DETAILS.name}. All rights reserved.</span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <button
+              type="button"
+              onClick={() => onOpenLegal?.('privacy')}
+              className="text-white/60 hover:text-white transition-colors cursor-pointer underline-offset-2 hover:underline"
+            >
+              Privacy Policy
+            </button>
+            <span className="text-white/20">•</span>
+            <button
+              type="button"
+              onClick={() => onOpenLegal?.('terms')}
+              className="text-white/60 hover:text-white transition-colors cursor-pointer underline-offset-2 hover:underline"
+            >
+              Terms &amp; Conditions
+            </button>
           </div>
 
           {/* Middle Bottom: Powered and Managed by Solvane Technologies */}

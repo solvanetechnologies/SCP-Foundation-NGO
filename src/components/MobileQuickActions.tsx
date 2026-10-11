@@ -38,14 +38,14 @@ export const MobileQuickActions: React.FC = () => {
           <span className="truncate">WhatsApp</span>
         </a>
 
-        {/* Support / Get Involved Button */}
+        {/* Support / Donate QR Button */}
         <a
-          href="#get-involved"
+          href="#donate-campaign"
           className="flex-1 min-h-[44px] flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl border border-[#FF9933]/30 bg-[#FFF7ED] text-[#EA580C] font-semibold text-xs hover:bg-[#FFEDD5] active:scale-95 transition-all shadow-2xs"
-          aria-label="Support SCP Foundation NGO programs"
+          aria-label="Donate to SCP Foundation NGO programs via UPI"
         >
           <Heart className="w-3.5 h-3.5 fill-current shrink-0" />
-          <span className="truncate">Support</span>
+          <span className="truncate">Donate</span>
         </a>
       </div>
     </aside>

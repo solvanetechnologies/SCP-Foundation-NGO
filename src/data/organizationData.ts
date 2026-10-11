@@ -47,6 +47,14 @@ export const ORGANIZATION_DETAILS = {
   hindiMotto: "छोटा सहयोग • बड़ा बदलाव",
   missionStatement: "SCP Foundation NGO works toward a more empowered and inclusive society through education, skill development, women's empowerment, and community-focused initiatives.",
   disclaimer: "Registered under the Societies Registration Act, XXI of 1860. Independent certification records remain on official file with the organization.",
+  donation: {
+    upiId: "royaldigi@sbi",
+    qrCodeImage: "/assets/donation-qr.jpg",
+    upiLink: "upi://pay?pa=royaldigi@sbi&pn=SCP%20Foundation%20NGO&cu=INR",
+    accountHolder: "SCP Foundation NGO",
+    bank: "State Bank of India (SBI)",
+    acceptedApps: ["Google Pay", "PhonePe", "Paytm", "BHIM", "Any UPI App"],
+  },
 };
 
 export const PROGRAMS: ProgramItem[] = [

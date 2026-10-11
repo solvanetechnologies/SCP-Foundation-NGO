@@ -5,11 +5,11 @@ import { ORGANIZATION_DETAILS } from '../data/organizationData';
 export const GetInvolvedSection: React.FC = () => {
   const pathways = [
     {
-      title: "Sponsor Study Kits",
-      desc: "Contribute books, stationery, school uniforms, or educational supplies for underprivileged students in Delhi.",
+      title: "Direct UPI Donation",
+      desc: "Scan our official QR code to sponsor study kits, books, or uniforms for underprivileged children.",
       icon: BookOpen,
-      actionText: "Enquire About Education Kits",
-      href: "#contact"
+      actionText: "Scan QR & Donate via UPI",
+      href: "#donate-campaign"
     },
     {
       title: "Volunteer as a Tutor",

@@ -24,6 +24,7 @@ This document catalogs all media items utilized across the SCP Foundation NGO la
 | `public/assets/donate-education-poster.png` | `https://scpfoundation.tumblr.com/post/828352334396637184` | Tumblr (Sep 2026 update) | Official "Education Awareness Campaign" poster created and issued by SCP Foundation NGO. | Education program spotlight & Campaign section. |
 | `public/assets/donate-education-campaign.png` | `https://scpfoundation.tumblr.com/post/828346314281697280` | Tumblr (Sep 2026 update) | Official "Donate for Education" campaign artwork with core initiatives. | Donation Campaign section. |
 | `public/assets/women-empowerment-graphic.png` | `https://scpfoundation.tumblr.com/post/830102505571713024` | Tumblr (Oct 2026 update) | Official "Empowering Women for a Better Tomorrow" comprehensive program infographic. | Programs & Gallery sections. |
+| `public/assets/donation-qr.jpg` | Provided directly by client | Official UPI QR Code (`royaldigi@sbi`) | Authentic State Bank of India (SBI) UPI QR code for direct educational donations. | Donation Campaign section & Mobile Quick Dock. |
 
 ---
 

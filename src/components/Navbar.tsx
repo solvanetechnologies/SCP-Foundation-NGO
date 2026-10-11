@@ -27,6 +27,7 @@ export const Navbar: React.FC = () => {
     { label: 'Home', href: '#hero' },
     { label: 'About Us', href: '#about' },
     { label: 'Our Programs', href: '#programs' },
+    { label: 'Donate via UPI', href: '#donate-campaign' },
     { label: 'Our Impact', href: '#impact' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Get Involved', href: '#get-involved' },
@@ -117,21 +118,21 @@ export const Navbar: React.FC = () => {
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="#get-involved"
+              href="#donate-campaign"
               className="inline-flex items-center gap-2 bg-[#138808] hover:bg-[#0E6606] text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm transition-all duration-200 hover:shadow hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] focus-visible:ring-offset-2"
             >
               <Heart className="w-4 h-4 text-[#FF9933] fill-current" />
-              <span>Get Involved</span>
+              <span>Donate via UPI</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex lg:hidden items-center gap-2">
             <a
-              href="#get-involved"
+              href="#donate-campaign"
               className="inline-flex items-center justify-center p-2 rounded-lg bg-[#138808] text-white text-xs font-semibold px-3"
             >
-              Support
+              Donate
             </a>
             <button
               type="button"
@@ -177,12 +178,12 @@ export const Navbar: React.FC = () => {
 
           <div className="pt-4 border-t border-[#E8ECE9] flex flex-col gap-2.5">
             <a
-              href="#get-involved"
+              href="#donate-campaign"
               onClick={handleLinkClick}
               className="w-full min-h-[44px] inline-flex items-center justify-center gap-2 bg-[#138808] hover:bg-[#0E6606] text-white font-semibold py-3 rounded-xl shadow-sm text-sm"
             >
               <Heart className="w-4 h-4 text-[#FF9933] fill-current" />
-              <span>Get Involved / Support</span>
+              <span>Donate via UPI / Scan QR</span>
             </a>
 
             <div className="grid grid-cols-2 gap-2">

@@ -74,11 +74,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLightbox }) => {
               </a>
 
               <a
-                href="#get-involved"
+                href="#donate-campaign"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-[#F3F4F1] border-2 border-[#138808] text-[#138808] font-semibold text-base px-7 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] focus-visible:ring-offset-2 shadow-xs"
               >
                 <Heart className="w-4 h-4 text-[#EA580C] fill-current" />
-                <span>Get Involved</span>
+                <span>Donate / Support</span>
               </a>
             </div>
 

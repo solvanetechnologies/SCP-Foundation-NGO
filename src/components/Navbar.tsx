@@ -26,9 +26,8 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: 'Home', href: '#hero' },
     { label: 'About Us', href: '#about' },
-    { label: 'Our Programs', href: '#programs' },
-    { label: 'Donate via UPI', href: '#donate-campaign' },
-    { label: 'Our Impact', href: '#impact' },
+    { label: 'Programs', href: '#programs' },
+    { label: 'Impact', href: '#impact' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Get Involved', href: '#get-involved' },
     { label: 'Contact', href: '#contact' },
@@ -75,39 +74,39 @@ export const Navbar: React.FC = () => {
 
       {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 gap-4">
           
-          {/* Authentic Logo Link */}
+          {/* Authentic Logo Link (shrink-0 to prevent any truncation) */}
           <a
             href="#hero"
-            className="flex items-center gap-2.5 sm:gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] rounded-md p-1 min-w-0"
+            className="flex items-center gap-2.5 sm:gap-3 group shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] rounded-md p-1"
             aria-label="SCP Foundation NGO Homepage"
           >
             <div className="relative h-10 sm:h-12 w-auto shrink-0 flex items-center bg-white rounded p-0.5 border border-[#E2E4DC]">
               <img
                 src="/scp-foundation-logo.jpg"
                 alt="SCP Foundation NGO official logo"
-                className="h-9 sm:h-11 w-auto object-contain max-w-[120px] sm:max-w-[180px]"
+                className="h-9 sm:h-11 w-auto object-contain"
                 loading="eager"
               />
             </div>
-            <div className="flex flex-col min-w-0">
-              <span className="text-sm sm:text-lg font-bold tracking-tight text-[#17212B] leading-tight truncate">
+            <div className="flex flex-col shrink-0">
+              <span className="text-sm sm:text-base lg:text-lg font-bold tracking-tight text-[#17212B] leading-tight whitespace-nowrap">
                 SCP Foundation
               </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-[#138808] tracking-wider uppercase truncate">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-[#138808] tracking-wider uppercase whitespace-nowrap">
                 NGO • New Delhi
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-7 shrink-0" aria-label="Main Navigation">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-[#17212B] hover:text-[#138808] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] rounded px-1 py-0.5 relative group"
+                className="text-xs xl:text-sm font-medium text-[#17212B] hover:text-[#138808] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] rounded px-1 py-0.5 relative group whitespace-nowrap"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1 right-1 h-0.5 bg-[#138808] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200" />
@@ -116,10 +115,10 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop Right CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <a
               href="#donate-campaign"
-              className="inline-flex items-center gap-2 bg-[#138808] hover:bg-[#0E6606] text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm transition-all duration-200 hover:shadow hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-[#138808] hover:bg-[#0E6606] text-white text-xs xl:text-sm font-semibold px-4 xl:px-5 py-2.5 rounded-lg shadow-sm transition-all duration-200 hover:shadow hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#138808] focus-visible:ring-offset-2 whitespace-nowrap"
             >
               <Heart className="w-4 h-4 text-[#FF9933] fill-current" />
               <span>Donate via UPI</span>

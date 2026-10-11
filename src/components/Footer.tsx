@@ -158,26 +158,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
 
         </div>
 
-        {/* Bottom Bar: Copyright, Legal Links, Powered By, and Back-to-Top */}
+        {/* Bottom Bar: Copyright, Powered By, and Back-to-Top */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50 text-center md:text-left">
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1">
-            <span>&copy; {currentYear} {ORGANIZATION_DETAILS.name}. All rights reserved.</span>
-            <span className="hidden sm:inline text-white/20">•</span>
-            <button
-              type="button"
-              onClick={() => onOpenLegal?.('privacy')}
-              className="text-white/60 hover:text-white transition-colors cursor-pointer underline-offset-2 hover:underline"
-            >
-              Privacy Policy
-            </button>
-            <span className="text-white/20">•</span>
-            <button
-              type="button"
-              onClick={() => onOpenLegal?.('terms')}
-              className="text-white/60 hover:text-white transition-colors cursor-pointer underline-offset-2 hover:underline"
-            >
-              Terms &amp; Conditions
-            </button>
+          <div>
+            &copy; {currentYear} {ORGANIZATION_DETAILS.name}. All rights reserved.
           </div>
 
           {/* Middle Bottom: Powered and Managed by Solvane Technologies */}
